@@ -21,6 +21,7 @@ export async function getCurrentStockValue(
   const transactionData: Transaction[] = await readFiles<Transaction[]>(
     TRANSACTION_FILE_PATH,
   );
+  // stockOut is a number value of stock value avaialbe in transactions file
   const stockOut: number =
     transactionData
       .filter(({ sku }: { sku: string }) => sku === stockString)
@@ -30,15 +31,17 @@ export async function getCurrentStockValue(
         0,
       ) || 0;
 
+  // intialStock is a number value of stock value avaialbe in stock file
   const intialStock: number =
     stockData.find((item: Stock) => item.sku === stockString)?.stock || 0;
-  console.log(stockOut, intialStock);
 
   //To throw an error where the SKU does not exist in the `transactions.json` and `stock.json`
   if (!intialStock && !stockOut) {
     throw { message: `SKU: ${stockString} does not exist` };
   }
 
-  const stock: number = Math.abs(intialStock - stockOut);
+  const stock: number = intialStock - stockOut;
+
+  // returing stock object with values
   return new StockModel({ sku: stockString, stock });
 }
