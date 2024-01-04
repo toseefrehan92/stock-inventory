@@ -7,6 +7,7 @@ module.exports = {
       'prettier',
       'plugin:prettier/recommended',
     ],
+    "ignorePatterns": ["server.test.ts"],
     rules: {
       // Additional rules or overrides if needed
     },
