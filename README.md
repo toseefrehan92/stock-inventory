@@ -5,10 +5,45 @@ Transactions - Stocks => Available Stocks.
 ## Description
 The objective is to create a function which is able to return the current stock levels for a given SKU by combining the data in these two files.
 
-## Getting Started
+### Modularity
 
-### Prerequisites
-NodeJs
+The project likely has a modular file structure, organizing code based on features or functionalities. Each module may contain its own set of controllers, services, models, etc.
+
+
+## Tech Stack:
+
+### Node.js:
+Used as the runtime environment.
+### Express.js: 
+Used as the web framework for handling HTTP requests.
+### TypeScript: 
+Providing static typing and improved development experience.
+### Jest: 
+Used for writing and running tests, ensuring code reliability.
+### Husky: 
+Configured webhooks to run pre-commit hooks for linting and testing, preventing bad commits.
+
+
+## Static Code Analysis:
+
+### Linting: 
+Follows best practices for static code analysis, which includes linting.
+
+## Data Handling:
+
+### JSON Files: 
+The project reads and processes data from JSON files, likely containing transaction and stock information.
+
+## Testing:
+
+### Jest Tests: 
+
+This includes end-to-end tests using Jest to ensure the correctness of the codebase.
+
+### Continuous Integration:
+## Husky Webhooks: 
+Integrated with Git hooks, running linting and testing before allowing commits. This ensures that only clean and tested code is pushed.
+
 
 ### Instructions to setup:-
 
