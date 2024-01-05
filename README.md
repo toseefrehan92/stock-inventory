@@ -40,8 +40,8 @@ The project reads and processes data from JSON files, likely containing transact
 
 This includes end-to-end tests using Jest to ensure the correctness of the codebase.
 
-### Continuous Integration:
-## Husky Webhooks: 
+## Continuous Integration:
+### Husky Webhooks: 
 Integrated with Git hooks, running linting and testing before allowing commits. This ensures that only clean and tested code is pushed.
 
 
